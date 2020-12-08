@@ -1,18 +1,7 @@
 'use strict';
 
-const browsers = [
-  'last 1 Chrome versions',
-  'last 1 Firefox versions',
-  'last 1 Safari versions'
-];
-
-const isCI = !!process.env.CI;
-const isProduction = process.env.EMBER_ENV === 'production';
-
-if (isCI || isProduction) {
-  browsers.push('ie 11');
-}
+const browsers = ['Edge >= 80', 'Chrome >= 66', 'Firefox >= 58', 'Safari >= 13'];
 
 module.exports = {
-  browsers
+  browsers,
 };
